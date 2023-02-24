@@ -6,6 +6,7 @@ import java.io.IOException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -16,6 +17,8 @@ import com.google.common.io.Files;
 import GithubBrowserAutomation.Automation;
 
 public class AutomationUtilities {
+	public static WebDriver driver;
+	
 	public static WebElement getExplicitWait(WebElement element, long time) {
 		WebDriverWait wait = new WebDriverWait(driver, time);
 		WebElement elem = wait.until(ExpectedConditions.elementToBeClickable(element));

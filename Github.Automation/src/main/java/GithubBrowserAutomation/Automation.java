@@ -4,6 +4,7 @@ package GithubBrowserAutomation;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -39,7 +40,7 @@ public static WebDriver driver;
 		driver.findElement(By.xpath("//input[@type='submit']")).click();
 }
 	
-	@Test(priority=1)
+	@Test(priority=2)
 	public static void SuccessfullLogin() {
 		driver.findElement(By.linkText("Sign in")).click();
 		//driver.findElement(By.id("login")).sendKeys("Rajib");
@@ -54,13 +55,15 @@ public static WebDriver driver;
 		
 
 }
-	@Test(priority=1)
+	@Test(priority=3)
 	public static void GenerateToken1() {
 	
 
+Select Dropdown = new Select("//span[@class='dropdown-caret'])[2]");
+Dropdown.selectByVisibleText("Settings");
 
 }
-	@Test(priority=1)
+	@Test(priority=4)
 	public static void GenerateToken2() {
 	
 
